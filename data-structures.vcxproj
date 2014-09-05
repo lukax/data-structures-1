@@ -10,6 +10,17 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="queue.c" />
+    <ClCompile Include="linkedlist_simple.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="stack.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="queue.h" />
+    <ClInclude Include="linkedlist_simple.h" />
+    <ClInclude Include="stack.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{87012CB1-D7FC-4369-9A8D-95C133EAC858}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -77,12 +88,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="linkedlist.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="linkedlist.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,26 +1,13 @@
 #include <stdio.h>
-#include "linkedlist.h"
+#include "linkedlist_simple.h"
 
-int main(){
-	List *l = list_init();
-	l = list_ins(l, 5);
-	l = list_ins(l, 6);
-	l = list_ins(l, 9);
-	l = list_ins(l, 1);
-	list_print(l);
-	l = list_rem(l, 5);
-	l = list_rem(l, 9);
-	list_print(l);
 
-	getchar();
-	return 0;
-}
 
 List *list_init(){
 	return NULL;
 }
 
-List *list_ins(List *list, int data){
+List *list_add(List *list, int data){
 	List *lnew = (List *)malloc(sizeof(List));
 	lnew->data = data;
 	lnew->next = NULL;
@@ -36,7 +23,7 @@ List *list_ins(List *list, int data){
 	return list;
 }
 
-List *list_rem(List *list, int data){
+List *list_remove(List *list, int data){
 	if (list == NULL)
 		return list;
 	if (list->data == data)
@@ -55,8 +42,9 @@ List *list_rem(List *list, int data){
 }
 
 void list_print(List *list){
-	for (List *l = list; l != NULL; l = l->next){
+    List *l;
+	for (l = list; l != NULL; l = l->next){
 		printf("%d->", l->data);
 	}
-	printf("\n");
+	printf("|\n");
 }
